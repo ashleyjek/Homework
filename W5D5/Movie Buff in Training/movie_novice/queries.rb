@@ -49,7 +49,7 @@ def star_wars
   # hint: use 'select' and 'where'
   Movie
   .select(:title, :id, :yr)
-  .where('title LIKE \'Star Wars%\'')
+  .where("title LIKE 'Star Wars%'")
   
 end
 
@@ -86,7 +86,7 @@ def pulp_fiction_actors
   Actor
   .select(:id, :name)
   .joins(:movies)
-  .where('title = \'Pulp Fiction\'')
+  .where("title = 'Pulp Fiction'")
   
   
 end
@@ -99,7 +99,7 @@ def uma_movies
   Movie
   .select(:id, :title, :yr)
   .joins(:actors)
-  .where('name = \'Uma Thurman\'')
+  .where("name = 'Uma Thurman'")
   .order('yr ASC')
   
 end
